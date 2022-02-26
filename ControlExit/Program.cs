@@ -28,7 +28,8 @@ namespace ControlExit
                 if (countTextOutput.Equals(exitCommand))
                     break;
 
-                for (int i = 0; i < countTextOutput; i++) Console.WriteLine((i + 1) + ". " + userText);
+                for (int i = 0; i < countTextOutput; i++)
+                    Console.WriteLine((i + 1) + ". " + userText);
             }
 
             Console.WriteLine("Выход...");
