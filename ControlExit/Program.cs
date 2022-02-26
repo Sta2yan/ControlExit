@@ -16,7 +16,7 @@ namespace ControlExit
             string exitText;
             bool isExit = false;
 
-            while (!isExit)
+            while (isExit == false)
             {
                 Console.Write("Введите текст для вывода: ");
                 userText = Console.ReadLine();
