@@ -13,23 +13,24 @@ namespace ControlExit
             string userText;
             int countTextOutput;
             string exitCommand = "exit";
+            string exitText;
+            bool isExit = false;
 
-            while (true)
+            while (!isExit)
             {
                 Console.Write("Введите текст для вывода: ");
                 userText = Console.ReadLine();
 
-                if(userText.Equals(exitCommand))
-                    break;
-
                 Console.Write("Введите сколько раз нужно вывести текст: ");
                 countTextOutput = Convert.ToInt32(Console.ReadLine());
 
-                if (countTextOutput.Equals(exitCommand))
-                    break;
-
                 for (int i = 0; i < countTextOutput; i++)
                     Console.WriteLine((i + 1) + ". " + userText);
+
+                Console.WriteLine("Для выхода напишите exit");
+                exitText = Console.ReadLine();
+                if (exitText.Equals(exitCommand))
+                    isExit = true;
             }
 
             Console.WriteLine("Выход...");
